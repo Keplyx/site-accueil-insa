@@ -1,5 +1,5 @@
 <?php
-    ob_start(); // Start reading html
+ob_start(); // Start reading html
 ?>
 <h1> Le Planning</h1>
 <p>Voici le planning de la semaine. Clique sur une activité pour avoir des informations.</p>
@@ -67,11 +67,11 @@
     </table>
 </div>
 <h1>Informations</h1>
-<div href="#info" id="infoBox">
+<div id="infoBox">
     <p>Cliquez sur un évenement pour afficher ses Informations</p>
 </div>
 <script src="assets/scripts/planningScript.js"></script>
 <?php
-    $pageContent = ob_get_clean(); // Store html content in variable
-    include("template.php"); // Display template with variable content
+$pageContent = ob_get_clean(); // Store html content in variable
+include("template.php"); // Display template with variable content
 ?>

@@ -1,7 +1,7 @@
 var current = null;
 var classes = null;
-$(document).ready(function() {
-    $(".event").click(function() {
+$(document).ready(function () {
+    $(".event").click(function () {
         /* Reset last selected items */
         if (current != null) {
             setEventShadow(current, "none");
@@ -15,19 +15,19 @@ $(document).ready(function() {
             scrollTop: $("#infoBox").offset().top
         }, 300);
     });
-    $(".event").hover(function() {
+    $(".event").hover(function () {
         var element = this.className.split(" ")[1];
         if (element != current) {
             setEventShadow(element, "0px 0px 5px #444");
         }
-    }, function() {
+    }, function () {
         var element = this.className.split(" ")[1];
         if (element != current) {
             setEventShadow(element, "none");
         }
     });
 
-    function setEventShadow(eventName, shadow){
+    function setEventShadow(eventName, shadow) {
         classes = document.getElementsByClassName(eventName);
         for (var i = 0; i < classes.length; i++) {
             classes[i].style.boxShadow = shadow;

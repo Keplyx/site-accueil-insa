@@ -12,18 +12,19 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Rubik" rel="stylesheet">
 </head>
 <body id="main">
-    <div id="back_button" onclick="closeNav()"></div>
-    <?php
-        include("includes/top_bar.html");
-        include("includes/sidenav.html");
-    ?>
-    <div id="home_content_wrap" class="outer">
-        <section id="home_content" class="inner">
-            <h1>Semaine d'Accueil 2018</h1>
-            <p>Ce site regroupe les informations les plus importantes pour que ta semaine d'accueil se déroule dans les meilleures conditions.</p>
-            <p>Utilise le menu en haut à gauche pour naviguer sur le site.</p>
-        </section>
-    </div>
+<div id="back_button" onclick="closeNav()"></div>
+<?php
+include("includes/top_bar.html");
+include("includes/sidenav.html");
+?>
+<div id="home_content_wrap" class="outer">
+    <section id="home_content" class="inner">
+        <h1>Semaine d'Accueil 2018</h1>
+        <p>Ce site regroupe les informations les plus importantes pour que ta semaine d'accueil se déroule dans les
+            meilleures conditions.</p>
+        <p>Utilise le menu en haut à gauche pour naviguer sur le site.</p>
+    </section>
+</div>
 </body>
 <script src="assets/scripts/sidenavScript.js"></script>
 </html>

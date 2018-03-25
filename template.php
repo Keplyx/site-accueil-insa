@@ -45,7 +45,7 @@
         <footer class="inner">
             <p class="copyright">Copyright ©
                 <script type="text/javascript">
-                    var d = new Date()
+                    var d = new Date();
                     document.write(d.getFullYear())
                 </script>
                 Arnaud VERGNET</p>
