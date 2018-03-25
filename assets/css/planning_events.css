@@ -1,0 +1,75 @@
+/*******************************************************************************
+General
+*******************************************************************************/
+
+#table_planning {
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#table_planning th {
+    border: none;
+    border-radius: 10px;
+    background: #414141;
+    font-weight: bold;
+}
+
+.horaires {
+    background: none;
+    border: none;
+    border-top: 1px solid #000;
+    text-align: right;
+    vertical-align: top;
+}
+
+.event {
+    border-radius: 20px;
+    border: none;
+    color: white;
+    vertical-align: middle;
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*******************************************************************************
+Events Specific
+*******************************************************************************/
+
+.discours {
+    background-color: #212121;
+}
+
+.remise_niveau {
+    background-color: #d2a000;
+}
+
+.barbecue, .banquet, .act_prev {
+    background-color: #7fa1b3;
+}
+
+.fabcamp {
+    background-color: #004568;
+}
+
+.soir {
+    background-color: #2696a2;
+}
+
+.escape_game {
+    background-color: #929ba8;
+}
+
+.com_ville {
+    background-color: #bbe19e;
+}
+
+.com_walle {
+    background-color: #a20000;
+}
+
+.wini {
+    background-color: #b7472a;
+}

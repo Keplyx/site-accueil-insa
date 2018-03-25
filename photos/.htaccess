@@ -1,0 +1,12 @@
+AuthName "Entrez vos identifiants INSA pour voir les photos"
+AuthType Basic
+AuthLDAPURL ldap://srv-ldap1.insa-toulouse.fr:389/ou=People,dc=insa-toulouse,dc=fr
+AuthBasicProvider ldap
+
+# Changer require avec propre login pour bloquer page pour tout le monde
+<limit GET POST>
+    require valid-user
+</limit>
+
+Options +FollowSymlinks
+RewriteEngine on

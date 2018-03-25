@@ -1,0 +1,50 @@
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    margin-left: -250px; /* change margin with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #111111;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 80px;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: none; /* change shadow with JavaScript */
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    color: #f0f0f0;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: white;
+    text-shadow: 2px 2px 5px #fff;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
