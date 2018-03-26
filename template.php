@@ -14,43 +14,36 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Rubik" rel="stylesheet">
 </head>
 <body id="main">
-    <div id="back_button" onclick="closeNav()"></div>
-    <?php
-        include("includes/top_bar.html");
-        include("includes/sidenav.html");
-    ?>
-    <div id="header_top">
-        <div id="hamburger" onclick="toggleNav()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <h4 id="menu_title">INSA Toulouse 2018</h4>
-    </div>
-    <div id="header_wrap" class="outer">
-        <header class="inner">
+<div id="back_button" onclick="closeNav()"></div>
+<?php
+include("includes/top_bar.html");
+include("includes/sidenav.html");
+?>
+<div id="header_wrap" class="outer">
+    <header class="inner">
 
-            <h1 id="title">Semaine d'Accueil 2018</h1>
-            <h2 id="description"></h2>
-        </header>
-    </div>
+        <h1 id="title">Semaine d'Accueil 2018</h1>
+        <h2 id="description"></h2>
+    </header>
+</div>
 
-    <div id="main_content_wrap" class="outer">
-        <section id="main_content" class="inner">
-            <?= $pageContent // Display content defined in calling file ?>
-        </section>
-    </div>
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <?= $pageContent // Display content defined in calling file  ?>
+    </section>
+</div>
 
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
-            <p class="copyright">Copyright ©
-                <script type="text/javascript">
-                    var d = new Date();
-                    document.write(d.getFullYear())
-                </script>
-                Arnaud VERGNET</p>
-        </footer>
-    </div>
-    <script src="assets/scripts/sidenavScript.js"></script>
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+        <p class="copyright">Copyright ©
+            <script type="text/javascript">
+                var d = new Date();
+                document.write(d.getFullYear())
+            </script>
+            Arnaud VERGNET
+        </p>
+    </footer>
+</div>
 </body>
+<script src="assets/scripts/sidenavScript.js"></script>
 </html>

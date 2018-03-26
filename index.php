@@ -22,6 +22,7 @@ include("includes/sidenav.html");
         <h1>Semaine d'Accueil 2018</h1>
         <p>Ce site regroupe les informations les plus importantes pour que ta semaine d'accueil se déroule dans les
             meilleures conditions.</p>
+        <br>
         <p>Utilise le menu en haut à gauche pour naviguer sur le site.</p>
     </section>
 </div>

@@ -2,17 +2,27 @@ var showcase = $("#img_big");
 var showcaseLink = $("#img_big_link");
 var photoBackButton = $("#photo_back_button");
 
+/*
+ * Display selected image in showcase
+ * When clicked, display image in full size
+ */
 function displayBig(elem) {
-    showcase.attr("src", $(elem).attr('src'));
-    showcaseLink.attr("href", $(elem).attr('src'));
+    changeImage($(elem).attr('src'));
     photoBackButton.css("display", "block");
-    console.log("yop");
 }
 
+
+/*
+ * Hide showcase image
+ */
 function closeBig() {
     photoBackButton.css("display", "none")
 }
 
+
+/*
+ * Display next/last image in showcase. When reaching end/start, loop back to start/end
+ */
 function displayNext(direction) {
     var currentSrc = showcase.attr('src');
     var photos = document.getElementsByClassName("photo");
@@ -33,5 +43,13 @@ function displayNext(direction) {
         nextId = "#photo-" + next;
     }
     var nextSrc = $(nextId).attr('src');
-    showcase.attr('src', nextSrc);
+    changeImage(nextSrc);
+}
+
+/*
+ * Change image source and link
+ */
+function changeImage(src) {
+    showcase.attr("src", src);
+    showcaseLink.attr("href", src);
 }

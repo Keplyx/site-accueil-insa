@@ -5,7 +5,7 @@
     width: 250px;
     margin-left: -250px; /* change margin with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 10;
+    z-index: 1000;
     top: 0;
     left: 0;
     background-color: #111111;
@@ -28,8 +28,8 @@
 }
 
 .sidenav a:hover {
-    color: white;
-    text-shadow: 2px 2px 5px #fff;
+    color: #c5af86;
+    text-shadow: 0 0 5px #c5af86;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
