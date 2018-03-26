@@ -44,7 +44,7 @@ include("includes/coms/com_template.php");
 
 $comTitle = "COM Walle-E";
 $comLogo = "assets/images/coms/logo.png";
-$comDescription = "Ici pour animer une journée entière";
+$comDescription = "Une journée dans la foret de Boucone, avec de nombreuses activités le matin ayant pour but de nettoyer la foret, et une piscine en accès libre l'après midi";
 $comRespo = "Nélia BAHRAOUI et Lucas PERRIN";
 $comRespoId = "bahraoui ou lperin";
 include("includes/coms/com_template.php");
