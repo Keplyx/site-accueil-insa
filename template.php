@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/planning_events.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/photos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Work+Sans" rel="stylesheet">
 </head>
 <body id="main">
 <div id="back_button" onclick="closeNav()"></div>
@@ -27,20 +27,20 @@ include("includes/sidenav.html");
     </header>
 </div>
 
+<div id="main_fading_top_edge"></div>
 <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
         <?= $pageContent // Display content defined in calling file  ?>
     </section>
 </div>
-
+<div id="main_fading_bottom_edge"></div>
 <div id="footer_wrap" class="outer">
     <footer class="inner">
-        <p class="copyright">Copyright ©
+        <p class="copyright">
             <script type="text/javascript">
                 var d = new Date();
-                document.write(d.getFullYear())
+                document.write("Copyright © " + d.getFullYear() + "Arnaud VERGNET")
             </script>
-            Arnaud VERGNET
         </p>
     </footer>
 </div>

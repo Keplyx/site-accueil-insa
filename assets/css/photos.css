@@ -1,20 +1,20 @@
 .photos_folder {
     width: 100%;
     display: flex;
-    border: 1px solid #212121;
-    border-radius: 10px;
+    border: 1px solid #5a5a5a;
+    border-radius: 5px;
 }
 
 .photos_folder a:hover, .photos_path a:hover {
     box-shadow: 0 0 10px #000;
-    background-color: white;
+    background-color: #e0e0e0;
     color: black;
 }
 
 .photos_folder a {
     font-size: 25px;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px;
     min-width: 100px;
     height: 100px;
     padding: 10px;
@@ -22,10 +22,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #212121;
-    box-shadow: 0 0 2px #212121;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 4px #000;
     transition: 0.3s;
-    color: white;
+    color: #e0e0e0;
 }
 
 .photos img {
@@ -34,14 +34,16 @@
     opacity: 1;
     cursor: pointer;
     transition: 0.3s;
+    padding: 0;
 }
 
 .photos img:hover {
-    opacity: 0.5;
+    box-shadow: 0 0 5px #000;
+    opacity: 0.7;
 }
 
 .photos img:active {
-    opacity: 0.1;
+    box-shadow: 0 0 10px #000;
 }
 
 .no_photo {
@@ -70,10 +72,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #212121;
-    box-shadow: 0 0 2px #212121;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 4px #000;
     transition: 0.3s;
-    color: white;
+    color: #e0e0e0;
 }
 
 #img_big {

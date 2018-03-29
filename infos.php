@@ -12,7 +12,7 @@ ob_start(); // Start reading html
 
 <h1>Credits</h1>
 <p>Voici les différentes technologies et ressources que ce site utilise :</p>
-<p><a href="https://icons8.com/">Icons8</a> | <a href="https://commons.wikimedia.org/wiki/File:Triton_(artist%27s_impression).jpg">Fond du site</a></p>
+<p><a href="https://icons8.com/">Icons8</a> | <a href="http://maxpixel.freegreatpicture.com/World-Earth-Rise-Sunrise-Space-Outer-Sun-Globe-1765027">Fond du site</a></p>
 <a href="https://jquery.com/">JQuery</a>
 <br>
 <a href="https://www.javascript.com/">JavaScript</a>
