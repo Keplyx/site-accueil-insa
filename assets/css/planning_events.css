@@ -19,7 +19,7 @@ General
 .horaires {
     background: none;
     border: none;
-    border-top: 1px solid #000;
+    border-top: 1px solid #ccc;
     text-align: right;
     vertical-align: top;
 }

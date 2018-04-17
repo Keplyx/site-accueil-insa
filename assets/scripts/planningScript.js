@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(".event").hover(function () {
         var element = this.className.split(" ")[1];
         if (element != current) {
-            setEventShadow(element, "0px 0px 5px #444");
+            setEventShadow(element, "0px 0px 5px #aaa");
         }
     }, function () {
         var element = this.className.split(" ")[1];

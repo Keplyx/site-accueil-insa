@@ -18,13 +18,16 @@ ob_start(); // Start reading html
         </tr>
         <tr>
             <td class="horaires">8h30</td>
-            <td class="event discours">Discours du Directeur</td>
-            <td rowspan="3" class="event fabcamp">FabCamp</td>
-            <td rowspan="3" class="event fabcamp">FabCamp</td>
-            <td rowspan="3" class="event escape_game">Escape Game</td>
-            <td rowspan="5" class="event com_walle">COM Wall-E</td>
-            <td rowspan="7" class="event wini">WINI</td>
-            <td rowspan="7" class="event wini">WINI</td>
+            <td rowspan="2" class="event discours">Discours du Directeur</td>
+            <td rowspan="4" class="event fabcamp">FabCamp</td>
+            <td rowspan="4" class="event fabcamp">FabCamp</td>
+            <td rowspan="4" class="event escape_game">Escape Game</td>
+            <td rowspan="10" class="event com_walle">COM Wall-E</td>
+            <td rowspan="13" class="event wini">WINI</td>
+            <td rowspan="13" class="event wini">WINI</td>
+        </tr>
+        <tr>
+            <td class="horaires">9h30</td>
         </tr>
         <tr>
             <td class="horaires">10h30</td>
@@ -36,25 +39,40 @@ ob_start(); // Start reading html
         </tr>
         <tr>
             <td class="horaires">12h</td>
-            <td class="event barbecue">Barbecue</td>
-            <td class="event barbecue">Barbecue</td>
-            <td class="event barbecue">Barbecue</td>
-            <td class="event barbecue">Barbecue</td>
+            <td rowspan="2" class="event barbecue">Barbecue</td>
+            <td rowspan="2" class="event barbecue">Barbecue</td>
+            <td rowspan="2" class="event barbecue">Barbecue</td>
+            <td rowspan="2" class="event barbecue">Barbecue</td>
+        </tr>
+        <tr>
+            <td class="horaires">13h</td>
         </tr>
         <tr>
             <td class="horaires">14h</td>
-            <td class="event fabcamp">FabCamp</td>
-            <td class="event fabcamp">FabCamp</td>
-            <td class="event fabcamp">FabCamp</td>
-            <td class="event com_ville">COM Ville</td>
+            <td rowspan="4" class="event fabcamp">FabCamp</td>
+            <td rowspan="4" class="event fabcamp">FabCamp</td>
+            <td rowspan="4" class="event fabcamp">FabCamp</td>
+            <td rowspan="4" class="event com_ville">COM Ville</td>
+        </tr>
+        <tr>
+            <td class="horaires">15h</td>
+        </tr>
+        <tr>
+            <td class="horaires">16h</td>
+        </tr>
+        <tr>
+            <td class="horaires">17h</td>
         </tr>
         <tr>
             <td class="horaires">18h</td>
-            <td class="event banquet">Banquet</td>
-            <td class="event banquet">Banquet</td>
-            <td class="event banquet">Banquet</td>
-            <td class="event banquet">Banquet</td>
-            <td class="event banquet">Banquet</td>
+            <td rowspan="2" class="event banquet">Banquet</td>
+            <td rowspan="2" class="event banquet">Banquet</td>
+            <td rowspan="2" class="event banquet">Banquet</td>
+            <td rowspan="2" class="event banquet">Banquet</td>
+            <td rowspan="2" class="event banquet">Banquet</td>
+        </tr>
+        <tr>
+            <td class="horaires">19h</td>
         </tr>
         <tr>
             <td class="horaires">20h</td>

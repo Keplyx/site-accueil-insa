@@ -67,7 +67,7 @@ $comTitle = "COM Plaquette";
 $comLogo = "assets/images/coms/logo.png";
 $comDescription = "Grâce à eux vous avez de la lecture";
 $comRespo = "Vincent SOISSONS";
-$comRespoId = "soisson";
+$comRespoId = "soissons";
 include("includes/coms/com_template.php");
 
 $comTitle = "Spe Bar";
