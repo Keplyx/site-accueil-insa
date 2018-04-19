@@ -1,16 +1,23 @@
 <?php
 ob_start(); // Start reading html
+// Get active folder from url and prevent from seeing folders before photos/
 function getActiveFolder()
 {
-    if ($_GET['folder'] != "") {
-        return $_GET['folder'];
-    } else {
-        return "photos/";
+    $dir = $_GET['folder'];
+    $folders = explode(DIRECTORY_SEPARATOR, $dir);
+    $currentPath = "";
+    foreach ($folders as $value) {
+        if ($value != "..") {
+            $currentPath .= $value . DIRECTORY_SEPARATOR;
+        }
     }
+    return $currentPath;
 }
 
+// Get all directories in the specified path
 function getDirectories($dir)
 {
+    $dir = "photos/".$dir;
     $files = scandir($dir);
     $displayedItems = 0;
     foreach ($files as $key => $value) {
@@ -29,8 +36,10 @@ function getDirectories($dir)
     }
 }
 
+// Get all photos in the specified path
 function getPhotos($dir)
 {
+    $dir = "photos/".$dir;
     $files = scandir($dir);
     $displayedItems = 0;
     foreach ($files as $key => $value) {
@@ -51,10 +60,14 @@ function getPhotos($dir)
     }
 }
 
+// Creates buttons representing the actual path for easier navigation
 function generatePath($dir)
 {
     $folders = explode(DIRECTORY_SEPARATOR, $dir);
     $currentPath = "";
+    $pathTitle = "Menu";
+    $pathLink = "?folder=";
+    include("includes/photos/path_template.php");
     foreach ($folders as $value) {
         if ($value != "") {
             $pathTitle = $value;
