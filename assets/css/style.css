@@ -31,8 +31,8 @@ Theme Styles
 
 body {
     /*Full page background*/
-    background-size: cover;
     background: url("../images/bg.jpg") no-repeat fixed center;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
     color: #e0e0e0;
     font-family: 'Work Sans', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: -1px;
     text-align: center;
 }
@@ -278,8 +278,8 @@ Full-Width Styles
 #table_coms{
     width: 100%;
     table-layout: auto;
-    text-align: left;
-    border: none;
+    text-align: center;
+    border: 1px solid #5c5c5c;
 }
 
 #table_coms td{
@@ -291,11 +291,6 @@ Full-Width Styles
 .com_description{
     width: 100%;
     font-weight: bold;
-}
-
-.com_logo{
-    width: 100px;
-    min-width: 50px;
 }
 
 #back_button{
@@ -310,20 +305,25 @@ Full-Width Styles
     transition: 0.3s;
 }
 
-#photo_back_button{
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #212121cc;
-    z-index: 5;
-    transition: 0.3s;
-}
-
 .active_background {
     z-index: 100 !important;
     opacity: 0.7 !important;
+}
+
+.main_button {
+    background: #1a1a1a;
+    padding: 10px;
+    border: 1px solid #5a5a5a;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #b5b5b5;
+    box-shadow: 0 0 4px #000;
+}
+
+.main_button:hover {
+    box-shadow: 0 0 10px #000;
+    background-color: #e0e0e0;
+    color: black;
 }
 
 

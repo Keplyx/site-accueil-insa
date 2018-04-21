@@ -24,7 +24,7 @@ function getDirectories($dir)
         $path = realpath($dir . DIRECTORY_SEPARATOR . $value);
         if (is_dir($path) && $value != "." && $value != "..") {
             $folderTitle = $value;
-            $folderLink = "?folder=" . getActiveFolder() . $value . DIRECTORY_SEPARATOR;
+            $folderLink = "?folder=" . getActiveFolder() . $value;
             $folderClass = "";
             include("includes/photos/folder_template.php");
             $displayedItems++;
@@ -47,7 +47,7 @@ function getPhotos($dir)
         if (!is_dir($path)) {
             $ext = pathinfo($path, PATHINFO_EXTENSION);
             if ($ext == "bmp" || $ext == "jpg" || $ext == "jpeg" || $ext == "png") {
-                $imageSrc = getActiveFolder() . $value;
+                $imageSrc = $dir . $value;
                 $imageId = "photo-" . $displayedItems;
                 include("includes/photos/photo_template.php");
                 $displayedItems++;
@@ -79,19 +79,30 @@ function generatePath($dir)
 }
 
 ?>
-<div id="photo_back_button" style="display:none">
-    <div id="close_back" onclick="closeBig()"><span class="fas fa-times" id="close"></span></div>
-    <span id="right" class="fas fa-arrow-right" onclick="displayNext(1)"></span>
-    <span id="left" class="fas fa-arrow-left" onclick="displayNext(-1)"></span>
-    <a href="" id="img_big_link">
-        <img src="" id="img_big"></img>
-    </a>
+<div id="photo_overlay" style="display:none">
+
+    <img src="" id="img_big" onclick="toggleFullscreen()">
+
+    <div id="close_back" onclick="closeBig()"></div>
+    <div id="photo_buttons">
+        <i id="right" class="fas fa-arrow-right" onclick="displayNext(1)"></i>
+        <i id="left" class="fas fa-arrow-left" onclick="displayNext(-1)"></i>
+        <div id="photo_control">
+            <i id="close" class="fas fa-times" onclick="closeBig()"></i>
+            <a href="" id="img_big_link">
+                <i id="fullscreen" class="fas fa-expand-arrows-alt" ></i>
+            </a>
+        </div>
+    </div>
+
+
+
 </div>
 
 <h1>Photos</h1>
 <p>Cliquez sur le dossier de votre choix pour afficher les photos</p>
 <ul class="photos_path">
-    <p>Chemin : </p>
+    <li><p>Chemin : </p></li>
     <?php
     generatePath(getActiveFolder());
     ?>

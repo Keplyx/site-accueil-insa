@@ -1,6 +1,10 @@
 var showcase = $("#img_big");
+var showcaseButton = $("#photo_buttons");
 var showcaseLink = $("#img_big_link");
-var photoBackButton = $("#photo_back_button");
+var photoOverlay = $("#photo_overlay");
+var headerTop = $("#header_top");
+var sideNav = $("#menuSidenav");
+
 
 /*
  * Display selected image in showcase
@@ -8,16 +12,58 @@ var photoBackButton = $("#photo_back_button");
  */
 function displayBig(elem) {
     changeImage($(elem).attr('src'));
-    photoBackButton.css("display", "block");
+    disableFullscreen();
+    photoOverlay.fadeIn(500);
 }
-
 
 /*
  * Hide showcase image
  */
 function closeBig() {
-    photoBackButton.css("display", "none")
+    disableFullscreen();
+    photoOverlay.fadeOut(500);
 }
+
+/*
+ * Toggle display of buttons/header
+ */
+function toggleFullscreen() {
+    if (showcaseButton.css("display") == "none")
+        disableFullscreen();
+    else
+        enableFullscreen();
+}
+
+function enableFullscreen() {
+    showcaseButton.fadeOut(500);
+    headerTop.fadeOut(500);
+    sideNav.fadeOut(500);
+}
+
+function disableFullscreen() {
+    showcaseButton.fadeIn(500);
+    headerTop.fadeIn(500);
+    sideNav.fadeIn(500);
+}
+
+/*
+ * Control images with keyboard arrows
+ */
+$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+            displayNext(-1);
+            break;
+
+        case 39: // right
+            displayNext(1);
+            break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
 
 
 /*

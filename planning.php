@@ -1,4 +1,4 @@
-<?php
+<?
 ob_start(); // Start reading html
 ?>
 <h1> Le Planning</h1>

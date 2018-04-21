@@ -24,6 +24,10 @@ include("includes/sidenav.html");
             meilleures conditions.</p>
         <br>
         <p>Utilise le menu en haut à gauche pour naviguer sur le site.</p>
+        <p>Voici les pages les plus importantes :</p>
+        <a class="main_button" href="planning.php">Planning</a>
+        <a class="main_button" href="parrainage.php">Parrainage</a>
+
     </section>
 </div>
 </body>

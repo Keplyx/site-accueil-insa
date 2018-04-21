@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/planning_events.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/photos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Work+Sans" rel="stylesheet">
 </head>
 <body id="main">
@@ -39,7 +40,7 @@ include("includes/sidenav.html");
         <p class="copyright">
             <script type="text/javascript">
                 var d = new Date();
-                document.write("Copyright © " + d.getFullYear() + "Arnaud VERGNET")
+                document.write("Copyright © " + d.getFullYear() + " Arnaud VERGNET")
             </script>
         </p>
     </footer>
