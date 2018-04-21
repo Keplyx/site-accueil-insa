@@ -21,7 +21,7 @@ function openNav() {
  * and hide the back button overlay
  */
 function closeNav() {
-    sidenav.css("margin-left", "-250px");
+    sidenav.css("margin-left", "-270px");
     backButton.removeClass("active_background");
     disableHamburger();
     menuOpen = false;
@@ -46,3 +46,24 @@ function disableHamburger() {
 function enableHamburger() {
     hamburger.addClass("change");
 }
+
+/*
+ * Open navigation menu when swiping right (if not swiping on an image)
+ */
+var img = document.querySelector('.sidenav');
+// Create a manager to manager the element
+var manager = new Hammer.Manager(img);
+// Create a recognizer
+var Swipe = new Hammer.Swipe();
+// Add the recognizer to the manager
+manager.add(Swipe);
+
+// Subscribe to the swipe event
+manager.on('swipe', function(e) {
+    var direction = e.offsetDirection;
+    if (direction === 4) { // right
+        openNav();
+    } else if (direction === 2) { // left
+        closeNav();
+    }
+});

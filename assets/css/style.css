@@ -326,6 +326,14 @@ Full-Width Styles
     color: black;
 }
 
+#swipe_area {
+    height: 100%;
+    width: 30px;
+    background: #3a7eaa;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
 /*******************************************************************************
 Small Device Styles

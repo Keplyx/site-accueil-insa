@@ -64,6 +64,29 @@ $(document).keydown(function(e) {
     e.preventDefault(); // prevent the default action (scroll / move caret)
 });
 
+/*
+ * Control images with swipes
+ */
+var img = document.querySelector('#photo_overlay');
+// Create a manager to manager the element
+var manager = new Hammer.Manager(img);
+// Create a recognizer
+var Swipe = new Hammer.Swipe();
+// Add the recognizer to the manager
+manager.add(Swipe);
+
+// Subscribe to the swipe event
+manager.on('swipe', function(e) {
+    var direction = e.offsetDirection;
+    if (direction === 4) { // right
+        displayNext(-1);
+    } else if (direction === 2){ // left
+        displayNext(1);
+    }
+});
+
+
+
 
 
 /*

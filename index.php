@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/hamburger.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Work+Sans" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body id="main">
 <div id="back_button" onclick="closeNav()"></div>

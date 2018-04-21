@@ -168,6 +168,10 @@
     position: fixed;
     display: block;
     z-index: 10;
+    /* Block selection of buttons (useful for mobile devices) */
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
 }
 
 #close_back {

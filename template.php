@@ -10,9 +10,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/hamburger.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/planning_events.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/photos.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Work+Sans" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body id="main">
 <div id="back_button" onclick="closeNav()"></div>
@@ -46,5 +47,6 @@ include("includes/sidenav.html");
     </footer>
 </div>
 </body>
+
 <script src="assets/scripts/sidenavScript.js"></script>
 </html>
