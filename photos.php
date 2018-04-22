@@ -89,6 +89,9 @@ function generatePath($dir)
         <i id="left" class="fas fa-arrow-left" onclick="displayNext(-1)"></i>
         <div id="photo_control">
             <i id="close" class="fas fa-times" onclick="closeBig()"></i>
+            <a id="img_big_download" download="" href="">
+                <i id="download" class="fas fa-download"></i>
+            </a>
             <a href="" id="img_big_link">
                 <i id="fullscreen" class="fas fa-expand-arrows-alt" ></i>
             </a>
@@ -111,6 +114,10 @@ function generatePath($dir)
     <?php
     getDirectories(getActiveFolder());
     ?>
+</div>
+<div id="download_album">
+    <i class="fas fa-download"></i>
+    <p>Télécharger l'album</p>
 </div>
 <div class="photos">
     <?php

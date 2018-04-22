@@ -1,6 +1,7 @@
 var showcase = $("#img_big");
 var showcaseButton = $("#photo_buttons");
 var showcaseLink = $("#img_big_link");
+var showcaseDownload = $("#img_big_download");
 var photoOverlay = $("#photo_overlay");
 var headerTop = $("#header_top");
 var sideNav = $("#menuSidenav");
@@ -12,6 +13,7 @@ var sideNav = $("#menuSidenav");
  */
 function displayBig(elem) {
     changeImage($(elem).attr('src'));
+    hideTopBar();
     disableFullscreen();
     photoOverlay.fadeIn(500);
 }
@@ -20,6 +22,7 @@ function displayBig(elem) {
  * Hide showcase image
  */
 function closeBig() {
+    showTopBar();
     disableFullscreen();
     photoOverlay.fadeOut(500);
 }
@@ -36,15 +39,23 @@ function toggleFullscreen() {
 
 function enableFullscreen() {
     showcaseButton.fadeOut(500);
-    headerTop.fadeOut(500);
-    sideNav.fadeOut(500);
 }
 
 function disableFullscreen() {
     showcaseButton.fadeIn(500);
+}
+
+function hideTopBar() {
+    headerTop.fadeOut(500);
+    sideNav.fadeOut(500);
+}
+
+function showTopBar() {
     headerTop.fadeIn(500);
     sideNav.fadeIn(500);
 }
+
+
 
 /*
  * Control images with keyboard arrows
@@ -116,9 +127,10 @@ function displayNext(direction) {
 }
 
 /*
- * Change image source and link
+ * Change image source, link and download
  */
 function changeImage(src) {
     showcase.attr("src", src);
     showcaseLink.attr("href", src);
+    showcaseDownload.attr("href", src);
 }

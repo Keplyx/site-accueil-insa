@@ -4,7 +4,7 @@
     border-radius: 5px;
 }
 
-.photos_folder a:hover, .photos_path a:hover {
+.photos_folder a:hover, .photos_path a:hover, #download_album:hover {
     box-shadow: 0 0 10px #000;
     background-color: #e0e0e0;
     color: black;
@@ -89,7 +89,7 @@
     transform: translate(-50%, -50%);
 }
 
-#close, #right, #left, #fullscreen {
+#close, #right, #left, #fullscreen, #download {
     color: white;
     width: 25px;
     height: 25px;
@@ -123,6 +123,14 @@
     bottom: 0;
 }
 
+#download {
+    color: #28ca2a;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
 #fullscreen {
     color: #2377c6;
     position: absolute;
@@ -138,12 +146,12 @@
     width: 40px;
 }
 
-#close:hover, #fullscreen:hover {
+#close:hover, #fullscreen:hover, #download:hover {
     height: 50px;
     width: 50px;
 }
 
-#close:active, #fullscreen:active {
+#close:active, #fullscreen:active, #download:active {
     height: 40px;
     width: 40px;
 }
@@ -155,7 +163,7 @@
     transform: translateX(50%);
     background: #1c1c1c;
     height: 25px;
-    width: 75px;
+    width: 125px;
     border-radius: 5px;
     transition: 0.3s;
 }
@@ -188,6 +196,30 @@
     height: 100%;
     background-color: #212121;
     z-index: 5;
+}
+
+#download_album {
+    height: 50px;
+    width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 4px #000;
+    transition: 0.3s;
+    color: #28ca2a;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#download_album p {
+    margin: 0;
+}
+
+#download_album svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
 }
 
 @media screen and (max-width: 480px) {
