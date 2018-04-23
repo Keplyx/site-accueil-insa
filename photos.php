@@ -60,18 +60,19 @@ function isAlbumAvailable($path)
 function createDirectories($path)
 {
     $path = photoRoot . $path;
-    $files = scandir($path);
     $displayedItems = 0;
-    foreach ($files as $key => $value) {
-        $realPath = realpath($path . DIRECTORY_SEPARATOR . $value);
-        if (isValidDirectory($realPath, $value)) {
-            $folderTitle = $value;
-            $folderLink = "?" . urlParam . "=" . getActivePath() . DIRECTORY_SEPARATOR . $value;
-            include("includes/photos/folder_template.php");
-            $displayedItems++;
-        }
+    $folders = getDirectories($path);
+    foreach ($folders as $key => $value) {
+        $folderTitle = $value;
+        $photos = getTotalPhotoCount($path . DIRECTORY_SEPARATOR . $value);
+        $albums = getTotalAlbumCount($path . DIRECTORY_SEPARATOR . $value);
+        $folderLink = "?" . urlParam . "=" . getActivePath() . DIRECTORY_SEPARATOR . $value;
+        include("includes/photos/folder_template.php");
+        $displayedItems++;
+
     }
 }
+
 
 /**
  * Get all photos in the specified path and creates them on the page
@@ -94,13 +95,30 @@ function createPhotos($path)
 }
 
 /**
+ * get folders in the given path
+ * @param string $path path to search folders in
+ * @return array array of folders
+ */
+function getDirectories($path)
+{
+    $files = scandir($path);
+    $folders = [];
+    foreach ($files as $key => $value) {
+        $realPath = realpath($path . DIRECTORY_SEPARATOR . $value);
+        if (isValidDirectory($realPath, $value)) {
+            array_push($folders, $value);
+        }
+    }
+    return $folders;
+}
+
+/**
  * Counts directories in the specified folder
  * @param string $path path to search directories in
  * @return int directories count
  */
 function getDirectoriesCount($path)
 {
-    $path = photoRoot . $path;
     $files = scandir($path);
     $dirCount = 0;
     foreach ($files as $key => $value) {
@@ -119,7 +137,6 @@ function getDirectoriesCount($path)
  */
 function getPhotoCount($path)
 {
-    $path = photoRoot . $path;
     $files = scandir($path);
     $fileCount = 0;
     foreach ($files as $key => $value) {
@@ -129,6 +146,31 @@ function getPhotoCount($path)
         }
     }
     return $fileCount;
+}
+
+/**
+ * Get the count of all directories, recursively from the path specified
+ * @param string $path root for search
+ * @return int total number of directories
+ */
+function getTotalAlbumCount($path)
+{
+    $folders = getDirectories($path);
+    $total = sizeof($folders);
+    foreach ($folders as $key => $value) {
+        $total += getTotalAlbumCount($path . DIRECTORY_SEPARATOR . $value);
+    }
+    return $total;
+}
+
+function getTotalPhotoCount($path)
+{
+    $folders = getDirectories($path);
+    $total = getPhotoCount($path);
+    foreach ($folders as $key => $value) {
+        $total += getTotalPhotoCount($path . DIRECTORY_SEPARATOR . $value);
+    }
+    return $total;
 }
 
 /**
@@ -207,7 +249,7 @@ function generatePath($path)
     generatePath(getActivePath());
     ?>
 </ul>
-<?php if (getDirectoriesCount(getActivePath()) > 0): ?>
+<?php if (getDirectoriesCount(photoRoot . getActivePath()) > 0): ?>
     <div class="photos_folder">
         <?php
         createDirectories(getActivePath());
@@ -219,10 +261,10 @@ function generatePath($path)
        href="photos<?php echo getActivePath() . DIRECTORY_SEPARATOR . GetActiveFolder(getActivePath()) ?>.zip"
        id="download_album">
         <span id="download_text"><i class="fas fa-download"></i>Télécharger l'album</span>
-        <span id="album_photo_count"><?php echo getPhotoCount(getActivePath()) ?> photos</span>
+        <span id="album_photo_count"><?php echo getPhotoCount(photoRoot . getActivePath()) ?> photos</span>
     </a>
 <?php endif; ?>
-<?php if (getPhotoCount(getActivePath()) > 0): ?>
+<?php if (getPhotoCount(photoRoot . getActivePath()) > 0): ?>
     <div class="photos">
         <?php
         createPhotos(getActivePath());
