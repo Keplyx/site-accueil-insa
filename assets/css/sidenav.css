@@ -18,19 +18,30 @@
 /* The navigation menu links */
 
 .sidenav a {
-    padding: 8px 0 8px 32px;
-    margin-right: 30px;
+    padding: 8px 0 8px 0;
+    margin: 0 30px 0 30px;
     text-decoration: none;
     font-size: 20px;
     font-family: 'Rubik', sans-serif;
     color: #f0f0f0;
-    display: block;
+    display: inline-flex;
     transition: 0.3s;
+    height: 30px;
+}
+
+.sidenav-icon {
+    left: 0;
+    margin-right: 5px;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    height: 20px;
+    width: 20px !important;
 }
 
 .sidenav a:hover {
     color: #c5af86;
     text-shadow: 0 0 5px #c5af86;
+    margin-left: 20px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
