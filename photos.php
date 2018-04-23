@@ -106,8 +106,11 @@ function generatePath($dir)
 <div id="photo_overlay" style="display:none">
 
     <img src="" id="img_big" onclick="toggleFullscreen()">
-
     <div id="close_back" onclick="closeBig()"></div>
+    <div id="loading" onclick="closeBig()">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+
     <div id="photo_buttons">
         <i id="right" class="fas fa-arrow-right" onclick="displayNext(1)"></i>
         <i id="left" class="fas fa-arrow-left" onclick="displayNext(-1)"></i>
@@ -121,9 +124,6 @@ function generatePath($dir)
             </a>
         </div>
     </div>
-
-
-
 </div>
 
 <h1>Photos</h1>

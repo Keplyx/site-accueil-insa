@@ -5,7 +5,7 @@ var showcaseDownload = $("#img_big_download");
 var photoOverlay = $("#photo_overlay");
 var headerTop = $("#header_top");
 var sideNav = $("#menuSidenav");
-
+var loading = $("#loading");
 
 /*
  * Display selected image in showcase
@@ -134,8 +134,21 @@ function displayNext(direction) {
  * Change image source, link and download
  */
 function changeImage(thumb) {
+    displayLoading();
+    showcase.on('load', function() {
+        hideLoading();
+    });
     var source = getSourceFromThumbnail(thumb);
     showcase.attr("src", source);
     showcaseLink.attr("href", source);
     showcaseDownload.attr("href", source);
+}
+
+
+function displayLoading() {
+    loading.show();
+}
+
+function hideLoading() {
+    loading.fadeOut(200);
 }
