@@ -70,7 +70,7 @@ function getPhotos($dir)
         $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
         if (!is_dir($path)) {
             $ext = pathinfo($path, PATHINFO_EXTENSION);
-            if ($ext == "bmp" || $ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif") {
+            if ($ext == "jpg" || $ext == "jpeg" || $ext == "png") {
                 $imageSrc = $dir.DIRECTORY_SEPARATOR.$value;
                 $imageId = "photo-".$displayedItems;
                 include("includes/photos/photo_template.php");
