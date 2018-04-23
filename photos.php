@@ -2,8 +2,12 @@
 ob_start(); // Start reading html
 
 define("urlParam", "path");
+define("photoRoot", "photos");
 
-// Get active path from url and prevent from seeing folders before photos/
+/**
+ * Get active path from url and prevent from seeing folders before 'photos/'
+ * @return string current path
+ */
 function getActivePath()
 {
     $dir = $_GET[urlParam];
@@ -11,24 +15,35 @@ function getActivePath()
     $currentPath = "";
     foreach ($folders as $value) {
         if ($value != ".." && $value != "." && $value != "") {
-            $currentPath .= DIRECTORY_SEPARATOR.$value;
+            $currentPath .= DIRECTORY_SEPARATOR . $value;
         }
     }
     return $currentPath;
 }
 
-// Get active folder from the active path
-function GetActiveFolder($path) {
+/**
+ * Get active folder from the active path
+ * @param string $path path representing the active folder
+ * @return string active folder name
+ */
+function GetActiveFolder($path)
+{
     $dir = explode(DIRECTORY_SEPARATOR, $path);
     return $dir[sizeof($dir) - 1]; // Last item after /
 }
 
-function isAlbumAvailable($path) {
-    $dir = "photos".$path;
+/**
+ * Check whether the current album is available for download as a .zip file
+ * @param string $path path to search the album in
+ * @return bool True if an album is available, false otherwise
+ */
+function isAlbumAvailable($path)
+{
+    $dir = photoRoot . $path;
     $files = scandir($dir);
     $valid = false;
     foreach ($files as $key => $value) {
-        $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
+        $path = realpath($dir . DIRECTORY_SEPARATOR . $value);
         if (!is_dir($path)) {
             $valid = pathinfo($path, PATHINFO_EXTENSION) == "zip";
             if ($valid)
@@ -38,65 +53,123 @@ function isAlbumAvailable($path) {
     return $valid;
 }
 
-
-// Get all directories in the specified path
-function getDirectories($dir)
+/**
+ * Get all directories in the specified path and creates them on the page
+ * @param string $path path to search directories in
+ */
+function createDirectories($path)
 {
-    $dir = "photos".$dir;
-    $files = scandir($dir);
+    $path = photoRoot . $path;
+    $files = scandir($path);
     $displayedItems = 0;
     foreach ($files as $key => $value) {
-        $path = realpath($dir . DIRECTORY_SEPARATOR . $value);
-        if (is_dir($path) && $value != "." && $value != "..") {
+        $realPath = realpath($path . DIRECTORY_SEPARATOR . $value);
+        if (isValidDirectory($realPath, $value)) {
             $folderTitle = $value;
-            $folderLink = "?".urlParam."=".getActivePath().DIRECTORY_SEPARATOR.$value;
+            $folderLink = "?" . urlParam . "=" . getActivePath() . DIRECTORY_SEPARATOR . $value;
             include("includes/photos/folder_template.php");
             $displayedItems++;
         }
     }
-    if ($displayedItems == 0) {
-        $placeHolder = "Pas d'autres albums !";
-        include("includes/photos/place_holder.php");
-    }
 }
 
-// Get all photos in the specified path
-function getPhotos($dir)
+/**
+ * Get all photos in the specified path and creates them on the page
+ * @param string $path path to search photos in
+ */
+function createPhotos($path)
 {
-    $dir = "photos_thumb".$dir;
-    $files = scandir($dir);
+    $path = photoRoot . "_thumb" . $path;
+    $files = scandir($path);
     $displayedItems = 0;
     foreach ($files as $key => $value) {
-        $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
-        if (!is_dir($path)) {
-            $ext = pathinfo($path, PATHINFO_EXTENSION);
-            if ($ext == "jpg" || $ext == "jpeg" || $ext == "png") {
-                $imageSrc = $dir.DIRECTORY_SEPARATOR.$value;
-                $imageId = "photo-".$displayedItems;
-                include("includes/photos/photo_template.php");
-                $displayedItems++;
-            }
+        $realPath = realpath($path . DIRECTORY_SEPARATOR . $value);
+        if (isValidImage($realPath)) {
+            $imageSrc = $path . DIRECTORY_SEPARATOR . $value;
+            $imageId = "photo-" . $displayedItems;
+            include("includes/photos/photo_template.php");
+            $displayedItems++;
         }
-    }
-    if ($displayedItems == 0) {
-        $placeHolder = "Pas de photos ici !";
-        include("includes/photos/place_holder.php");
     }
 }
 
-// Creates buttons representing the actual path for easier navigation
-function generatePath($dir)
+/**
+ * Counts directories in the specified folder
+ * @param string $path path to search directories in
+ * @return int directories count
+ */
+function getDirectoriesCount($path)
 {
-    $folders = explode(DIRECTORY_SEPARATOR, $dir);
+    $path = photoRoot . $path;
+    $files = scandir($path);
+    $dirCount = 0;
+    foreach ($files as $key => $value) {
+        $realPath = realpath($path . DIRECTORY_SEPARATOR . $value);
+        if (isValidDirectory($realPath, $value)) {
+            $dirCount++;
+        }
+    }
+    return $dirCount;
+}
+
+/**
+ * Counts images in the specified folder
+ * @param string $path path to search photos in
+ * @return int photo count
+ */
+function getPhotoCount($path)
+{
+    $path = photoRoot . $path;
+    $files = scandir($path);
+    $fileCount = 0;
+    foreach ($files as $key => $value) {
+        $realPath = realpath($path . DIRECTORY_SEPARATOR . $value);
+        if (isValidImage($realPath)) {
+            $fileCount++;
+        }
+    }
+    return $fileCount;
+}
+
+/**
+ * Check if the given image is valid
+ * @param string $imagePath absolute path of the image
+ * @return bool True if the file is a jpg, jpeg or png, false otherwise
+ */
+function isValidImage($imagePath)
+{
+    $ext = pathinfo($imagePath, PATHINFO_EXTENSION);
+    return !is_dir($imagePath) && ($ext == "jpg" || $ext == "jpeg" || $ext == "png");
+}
+
+/**
+ * Check if the given folder is valid (is not '.' or '..')
+ * @param string $directoryPath directory path
+ * @param string $directory directory name
+ * @return bool True if the directory is valid, false otherwise
+ */
+function isValidDirectory($directoryPath, $directory)
+{
+    return is_dir($directoryPath) && $directory != "." && $directory != "..";
+}
+
+
+/**
+ * Creates buttons representing the actual path for easier navigation
+ * @param string $path Actual Path
+ */
+function generatePath($path)
+{
+    $folders = explode(DIRECTORY_SEPARATOR, $path);
     $currentPath = "";
     $pathTitle = "Menu";
-    $pathLink = "?".urlParam."=";
+    $pathLink = "?" . urlParam . "=";
     include("includes/photos/path_template.php");
     foreach ($folders as $value) {
         if ($value != "") {
             $pathTitle = $value;
-            $currentPath .= DIRECTORY_SEPARATOR.$value;
-            $pathLink = "?".urlParam."=".$currentPath;
+            $currentPath .= DIRECTORY_SEPARATOR . $value;
+            $pathLink = "?" . urlParam . "=" . $currentPath;
             include("includes/photos/path_template.php");
         }
     }
@@ -120,7 +193,7 @@ function generatePath($dir)
                 <i id="download" class="fas fa-download"></i>
             </a>
             <a href="" id="img_big_link">
-                <i id="fullscreen" class="fas fa-expand-arrows-alt" ></i>
+                <i id="fullscreen" class="fas fa-expand-arrows-alt"></i>
             </a>
         </div>
     </div>
@@ -134,23 +207,28 @@ function generatePath($dir)
     generatePath(getActivePath());
     ?>
 </ul>
-<div class="photos_folder">
-    <?php
-    getDirectories(getActivePath());
-    ?>
-</div>
-<?php if(isAlbumAvailable(getActivePath())): ?>
-    <a download="" href="photos<?php echo getActivePath().DIRECTORY_SEPARATOR.GetActiveFolder(getActivePath())?>.zip" id="download_album">
-        <i class="fas fa-download"></i>
-        <p>Télécharger l'album</p>
+<?php if (getDirectoriesCount(getActivePath()) > 0): ?>
+    <div class="photos_folder">
+        <?php
+        createDirectories(getActivePath());
+        ?>
+    </div>
+<?php endif; ?>
+<?php if (isAlbumAvailable(getActivePath())): ?>
+    <a download=""
+       href="photos<?php echo getActivePath() . DIRECTORY_SEPARATOR . GetActiveFolder(getActivePath()) ?>.zip"
+       id="download_album">
+        <span id="download_text"><i class="fas fa-download"></i>Télécharger l'album</span>
+        <span id="album_photo_count"><?php echo getPhotoCount(getActivePath()) ?> photos</span>
     </a>
 <?php endif; ?>
-
-<div class="photos">
-    <?php
-    getPhotos(getActivePath());
-    ?>
-</div>
+<?php if (getPhotoCount(getActivePath()) > 0): ?>
+    <div class="photos">
+        <?php
+        createPhotos(getActivePath());
+        ?>
+    </div>
+<?php endif; ?>
 <script src="assets/scripts/photosScript.js"></script>
 <?php
 $pageContent = ob_get_clean(); // Store html content in variable

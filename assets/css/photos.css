@@ -221,9 +221,10 @@
 }
 
 #download_album {
-    height: 50px;
+    height: 70px;
     width: 200px;
     display: inline-flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     background-color: #1a1a1a;
@@ -234,11 +235,20 @@
     margin: 5px;
 }
 
-#download_album p {
-    margin: 0;
+#download_text {
+    margin-top: 5px;
+    position: absolute;
+    top: 0;
 }
 
-#download_album svg {
+#album_photo_count {
+    color: #929ba8;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+#download_text svg {
     width: 24px;
     height: 24px;
     margin-right: 5px;
