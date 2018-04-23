@@ -29,7 +29,9 @@
 
 .photos img {
     display: inline-flex;
-    width: 25%;
+    /* 4/3 format */
+    width: 140px;
+    height: 105px;
     opacity: 1;
     cursor: pointer;
     transition: 0.3s;

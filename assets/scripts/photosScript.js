@@ -18,6 +18,10 @@ function displayBig(elem) {
     photoOverlay.fadeIn(500);
 }
 
+function getSourceFromThumbnail(source) {
+    return source.replace("photos_thumb/", "photos/");
+}
+
 /*
  * Hide showcase image
  */
@@ -107,8 +111,8 @@ function displayNext(direction) {
     var currentSrc = showcase.attr('src');
     var photos = document.getElementsByClassName("photo");
     var current = 0;
-    for (i = 0; i < photos.length; i++) {
-        if ($(photos[i]).attr('src') == currentSrc) {
+    for (var i = 0; i < photos.length; i++) {
+        if (getSourceFromThumbnail($(photos[i]).attr('src')) === currentSrc) {
             current = i;
         }
     }
@@ -129,8 +133,9 @@ function displayNext(direction) {
 /*
  * Change image source, link and download
  */
-function changeImage(src) {
-    showcase.attr("src", src);
-    showcaseLink.attr("href", src);
-    showcaseDownload.attr("href", src);
+function changeImage(thumb) {
+    var source = getSourceFromThumbnail(thumb);
+    showcase.attr("src", source);
+    showcaseLink.attr("href", source);
+    showcaseDownload.attr("href", source);
 }

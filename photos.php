@@ -63,7 +63,7 @@ function getDirectories($dir)
 // Get all photos in the specified path
 function getPhotos($dir)
 {
-    $dir = "photos".$dir;
+    $dir = "photos_thumb".$dir;
     $files = scandir($dir);
     $displayedItems = 0;
     foreach ($files as $key => $value) {
