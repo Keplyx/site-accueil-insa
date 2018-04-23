@@ -59,6 +59,9 @@ function showTopBar() {
     sideNav.fadeIn(500);
 }
 
+$(document).ready(function() {
+    document.getElementById("photos_title").scrollIntoView();
+});
 
 
 /*

@@ -126,7 +126,7 @@ function generatePath($dir)
     </div>
 </div>
 
-<h1>Photos</h1>
+<h1 id="photos_title">Photos</h1>
 <p>Cliquez sur le dossier de votre choix pour afficher les photos</p>
 <ul class="photos_path">
     <li><p>Chemin : </p></li>

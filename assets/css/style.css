@@ -326,14 +326,26 @@ Full-Width Styles
     color: black;
 }
 
-#swipe_area {
-    height: 100%;
-    width: 30px;
-    background: #3a7eaa;
-    position: fixed;
-    top: 0;
-    left: 0;
+#credits-list {
+    list-style: none;
+    display: inline-flex;
 }
+
+#credits-list li {
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+#credits-list svg {
+    height: 50px;
+    width: 50px;
+}
+
+#credits-list a:hover{
+    color: #a3a7b3;
+}
+
 
 /*******************************************************************************
 Small Device Styles
