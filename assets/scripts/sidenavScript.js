@@ -70,12 +70,12 @@ manager.on('swipe', function(e) {
 
 // Animate hamburger on hover
 hamburger.hover(function(){
-    $("#bar1").css("background-color", "#c5af86");
-    $("#bar2-1").css("background-color", "#73b795");
-    $("#bar2-2").css("background-color", "#73b795");
+    $("#bar1").css("background-color", "#1a5dad");
+    $("#bar2-1").css("background-color", "#ee293d");
+    $("#bar2-2").css("background-color", "#ee293d");
     $("#bar2-1").css("left", "-5px");
     $("#bar2-2").css("right", "-5px");
-    $("#bar3").css("background-color", "#c5af86");
+    $("#bar3").css("background-color", "#1a5dad");
 }, function(){
     $("#bar1").css("background-color", "white");
     $("#bar2-1").css("background-color", "white");

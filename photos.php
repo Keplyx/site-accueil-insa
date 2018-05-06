@@ -181,7 +181,7 @@ function getTotalPhotoCount($path)
 function isValidImage($imagePath)
 {
     $ext = pathinfo($imagePath, PATHINFO_EXTENSION);
-    return !is_dir($imagePath) && ($ext == "jpg" || $ext == "jpeg" || $ext == "png");
+    return !is_dir($imagePath) && ($ext == "jpg" || $ext == "JPG" || $ext == "jpeg" || $ext == "JPEG" || $ext == "png" || $ext == "PNG");
 }
 
 /**
