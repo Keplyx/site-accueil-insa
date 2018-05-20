@@ -12,7 +12,7 @@ $(document).ready(function () {
         }
         /* Set style for currently selected items */
         current = this.className.split(" ")[1];
-        setEventShadow(current, "0px 0px 10px #000");
+        setEventShadow(current, "0px 0px 10px #ee293d");
         /* Load info box text and smoothly scroll to it */
         $("#infoBox").load("includes/planning_events/" + current + ".html");
         $('html, body').animate({
@@ -26,7 +26,7 @@ $(document).ready(function () {
     $(".event").hover(function () {
         var element = this.className.split(" ")[1];
         if (element != current) {
-            setEventShadow(element, "0px 0px 5px #aaa");
+            setEventShadow(element, "0px 0px 10px #1a5dad");
         }
     }, function () {
         var element = this.className.split(" ")[1];
@@ -42,7 +42,7 @@ $(document).ready(function () {
         classes = document.getElementsByClassName(eventName);
         for (var i = 0; i < classes.length; i++) {
             classes[i].style.boxShadow = shadow;
-
+            classes[i].style.textShadow = shadow;
         }
     }
 

@@ -11,9 +11,15 @@ General
 
 #table_planning th {
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #414141;
     font-weight: bold;
+    width: 12.5%;
+}
+
+#table_planning td {
+    padding: 0;
+    margin: 0 0 0 0;
 }
 
 .horaires {
@@ -25,7 +31,7 @@ General
 }
 
 .event {
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     color: white;
     vertical-align: middle;
