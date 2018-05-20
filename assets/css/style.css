@@ -311,19 +311,18 @@ Full-Width Styles
 }
 
 .main_button {
-    background: #1a1a1a;
-    padding: 10px;
-    border: 1px solid #5a5a5a;
+    background-color: #1a1a1a;
+    padding: 2px 2px 2px 2px;
     border-radius: 5px;
+    text-shadow: 0 0 5px #1c1c1c;
     font-size: 25px;
-    color: #b5b5b5;
+    color: #73b795;
     box-shadow: 0 0 4px #000;
 }
 
 .main_button:hover {
     box-shadow: 0 0 10px #000;
-    background-color: #e0e0e0;
-    color: black;
+    background-color: #635247;
 }
 
 #credits-list {

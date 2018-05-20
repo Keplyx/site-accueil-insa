@@ -8,5 +8,4 @@ AuthBasicProvider ldap
     require valid-user
 </limit>
 
-Options +FollowSymlinks
-RewriteEngine on
+Options -Indexes

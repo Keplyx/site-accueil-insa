@@ -25,7 +25,7 @@ include("includes/coms/com_template.php");
 
 $comTitle = "COM Walle-E";
 $comDescription = "Une journée dans la foret de Boucone, avec de nombreuses activités le matin ayant pour but de nettoyer la foret, et une piscine en accès libre l'après midi";
-$comRespo = "Nélia BAHRAOUI et Lucas PERRIN";
+$comRespo = "Nélia BAHRAOUI et Lucas PERIN";
 $comRespoId = "bahraoui ou lperin";
 include("includes/coms/com_template.php");
 
@@ -35,7 +35,7 @@ $comRespo = "Léa LAXAGUE et Blaise MAUGARD";
 $comRespoId = "laxague ou bmaugard";
 include("includes/coms/com_template.php");
 
-$comTitle = "COM Photos";
+$comTitle = "COM Hubble";
 $comDescription = "Souriez vous êtes filmés";
 $comRespo = "Lyana LETOURNEAU";
 $comRespoId = "lletourn";
@@ -61,7 +61,7 @@ $comRespo = "Zoé PHILIPPON";
 $comRespoId = "philippo";
 include("includes/coms/com_template.php");
 
-$comTitle = "Spe Bar";
+$comTitle = "Spé Bar";
 $comDescription = "La boisson !";
 $comRespo = "Louis GALZIN";
 $comRespoId = "galzin";

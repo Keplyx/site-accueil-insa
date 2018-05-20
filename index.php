@@ -25,10 +25,8 @@ include("includes/sidenav.html");
         <p>Ce site regroupe les informations les plus importantes pour que ta semaine d'accueil se déroule dans les
             meilleures conditions.</p>
         <br>
-        <p>Utilise le menu en haut à gauche pour naviguer sur le site.</p>
-        <p>Voici les pages les plus importantes :</p>
-        <a class="main_button" href="planning.php">Planning</a>
-        <a class="main_button" href="parrainage.php">Parrainage</a>
+        <p>Le menu en haut à gauche te permet d'accéder aux différentes pages du site, comme le <a class="main_button" href="planning.php">Planning</a>,
+            les informations sur le <a class="main_button" href="parrainage.php">Parrainage</a>, ou encore les <a class="main_button" href="photos.php">Photos</a> de la semaine !</p>
 
     </section>
 </div>
