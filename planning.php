@@ -86,7 +86,7 @@ ob_start(); // Start reading html
 </div>
 <h1>Informations</h1>
 <div id="infoBox">
-    <p>Cliquez sur un évenement pour afficher ses Informations</p>
+    <p>Clique sur un évenement pour afficher ses Informations</p>
 </div>
 <script src="assets/scripts/planningScript.js"></script>
 <?php

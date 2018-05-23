@@ -40,7 +40,7 @@ body {
     box-sizing: border-box;
     color: #b5b5b5;
     font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     text-align: center;
@@ -49,7 +49,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
     color: #e0e0e0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     letter-spacing: -1px;
     text-align: center;
@@ -214,8 +214,9 @@ Full-Width Styles
     font-size: 42px;
     text-shadow: #111 0 0 10px;
     text-align: center;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
+    cursor: default;
 }
 
 #description {
