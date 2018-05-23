@@ -6,6 +6,7 @@
     margin: 5px;
     height: 40px;
     width: 40px;
+    pointer-events: auto;
 }
 
 #bar1, #bar2-1, #bar2-2, #bar3 {

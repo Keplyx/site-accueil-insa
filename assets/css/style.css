@@ -183,6 +183,7 @@ Full-Width Styles
     z-index: 2000;
     height: 100px;
     background: linear-gradient(to bottom, #1c1c1c, transparent 90%);
+    pointer-events: none;
 }
 
 #header_top h4 {
