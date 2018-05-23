@@ -7,6 +7,7 @@ General
     border: none;
     border-collapse: separate;
     border-spacing: 10px;
+    font-size: 15px;
 }
 
 #table_planning th {
@@ -15,6 +16,7 @@ General
     background: #414141;
     font-weight: bold;
     width: 12.5%;
+    font-size: 17px;
 }
 
 #table_planning td {
@@ -78,4 +80,15 @@ Events Specific
 
 .wini {
     background-color: #b7472a;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    #table_planning {
+        font-size: 10px;
+    }
+    #table_planning th{
+        font-size: 12px;
+    }
 }
