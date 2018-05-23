@@ -274,5 +274,12 @@ function generatePath($path)
 <script src="assets/scripts/photosScript.js"></script>
 <?php
 $pageContent = ob_get_clean(); // Store html content in variable
+?>
+<?
+ob_start(); // Start reading html
+?>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/photos.css">
+<?php
+$pageMeta = ob_get_clean(); // Store html content in variable
 include("template.php"); // Display template with variable content
 ?>

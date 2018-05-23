@@ -91,5 +91,12 @@ ob_start(); // Start reading html
 <script src="assets/scripts/planningScript.js"></script>
 <?php
 $pageContent = ob_get_clean(); // Store html content in variable
+?>
+<?
+ob_start(); // Start reading html
+?>
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/planning_events.css">
+<?php
+$pageMeta = ob_get_clean(); // Store html content in variable
 include("template.php"); // Display template with variable content
 ?>
