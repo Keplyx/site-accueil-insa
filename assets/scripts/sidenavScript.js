@@ -10,6 +10,7 @@ var backButton = $("#back_button");
 
 function openNav() {
     sidenav.css("margin-left", "0");
+    sidenav.css("overflow", "auto");
     backButton.addClass("active_background");
     enableHamburger();
     menuOpen = true;
@@ -22,6 +23,7 @@ function openNav() {
  */
 function closeNav() {
     sidenav.css("margin-left", "-270px");
+    sidenav.css("overflow", "hidden");
     backButton.removeClass("active_background");
     disableHamburger();
     menuOpen = false;

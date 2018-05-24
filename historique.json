@@ -1,0 +1,26 @@
+{
+  "usa": [
+    {
+      "text": "whoa, des points!",
+      "points": 99,
+      "date": "19/07/2018"
+    },
+    {
+      "text": "whoa, encore des points!",
+      "points": 2,
+      "date": "19/07/2018"
+    }
+   ],
+  "urss":[
+    {
+      "text": "merde, mes points!",
+      "points": -99,
+      "date": "19/07/2018"
+    },
+    {
+      "text": "yes, des points!",
+      "points": 45,
+      "date": "19/07/2018"
+    }
+  ]
+}

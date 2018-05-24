@@ -5,20 +5,20 @@ ob_start(); // Start reading html
 <p>Voici la liste de toutes les coms de la semaine d'accueil, avec les contacts des responsables.</p>
 <p>Tous les mails cités sur cette page se terminent par <strong>@etud.insa-toulouse.fr</strong></p>
 <?php
-$comTitle = "COM Anim";
+$comTitle = "COM Mise à Feu";
 $comDescription = "Ici pour mettre l'ambiance toute la semaine!";
 $comRespo = "Paul MERLE";
 $comRespoId = "p_merle";
 include("includes/coms/com_template.php");
 
-$comTitle = "COM Escape Game";
-$comDescription = "Une matinée sur le campus de jeux en exterieur et d'énigmes";
+$comTitle = "COM Ins'cape Game";
+$comDescription = "Des énigmes pour sortir du campus";
 $comRespo = "Manon TARRADE";
 $comRespoId = "mtarade";
 include("includes/coms/com_template.php");
 
-$comTitle = "COM Ville";
-$comDescription = "Une après midi en ville de jeux et énigmes";
+$comTitle = "COM ISS";
+$comDescription = "Pour découvrir la ville rose";
 $comRespo = "Baptiste LERAT";
 $comRespoId = "lerat";
 include("includes/coms/com_template.php");
@@ -61,7 +61,7 @@ $comRespo = "Zoé PHILIPPON";
 $comRespoId = "philippo";
 include("includes/coms/com_template.php");
 
-$comTitle = "Spé Bar";
+$comTitle = "Space Bar";
 $comDescription = "La boisson !";
 $comRespo = "Louis GALZIN";
 $comRespoId = "galzin";

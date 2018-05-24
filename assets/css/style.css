@@ -186,8 +186,10 @@ Full-Width Styles
     pointer-events: none;
 }
 
-#header_top h4 {
-    color: white;
+#header_top a {
+    display: inline-flex;
+    pointer-events: auto;
+    height: 40px;
 }
 
 #header_wrap .inner {
@@ -195,9 +197,9 @@ Full-Width Styles
 }
 
 #menu_title {
-    border-bottom: none;
+    color: white;
     line-height: 40px;
-    height: 40px;
+    border-bottom: none;
     margin: 5px;
 }
 
@@ -264,7 +266,7 @@ Full-Width Styles
 }
 
 #main_content {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 #footer_wrap {
@@ -346,6 +348,42 @@ Full-Width Styles
     color: #a3a7b3;
 }
 
+#score_counter {
+    height: 100px;
+}
+
+#score_container {
+    width: 600px;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo One', sans-serif;
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #1C1C1C;
+}
+
+#score_usa, #score_urss {
+    font-size: 50px;
+}
+
+#score_usa{
+    color: #1a5dad;
+}
+
+#score_urss{
+    color: #ee293d;
+}
+
+#score_separator{
+    font-size: 70px;
+}
+
+.score_logo {
+    width: 100px;
+}
+
 
 /*******************************************************************************
 Small Device Styles
@@ -392,6 +430,17 @@ Small Device Styles
     #table_wrapper {
         width: 100%;
         overflow: scroll;
+    }
+    #score_counter {
+         height: 50px;
+    }
+
+    #score_container {
+        width: 300px;
+    }
+
+    #score_usa, #score_urss {
+        font-size: 25px;
     }
 }
 

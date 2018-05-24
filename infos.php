@@ -6,7 +6,7 @@ ob_start(); // Start reading html
 <p>Pour toute demande concernant ce site, merci de me contacter par <span class="fas fa-envelope"></span> Mail : vergnet
 </p>
 <p>Pour toute demande concernant la semaine d'accueil, merci de contacter le Prez par <span
-            class="fas fa-envelope"></span> Mail : aaaaa</p>
+            class="fas fa-envelope"></span> Mail : bquintan</p>
 <p>Pour toute demande concernant une activité/COM spécifique, allez sur la page des <a href="coms.php">COMs</a> pour
     contacter le responsable approprié.</p>
 

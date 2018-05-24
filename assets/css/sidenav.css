@@ -8,11 +8,16 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 80px;
+
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     text-align: left;
     background: linear-gradient(to right, #1c1c1c, transparent 90%);
+}
+
+
+#sidenav-scroll {
+    padding: 50px 0 50px 0;
+    width: 100%;
 }
 
 /* The navigation menu links */
@@ -28,7 +33,7 @@
     height: 30px;
 }
 
-.sidenav-icon {
+.sidenav-icon, .sidenav-image {
     left: 0;
     margin-right: 5px;
     -webkit-transform: translateY(5px);
@@ -37,9 +42,18 @@
     width: 20px !important;
 }
 
+.sidenav-image {
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
 .sidenav a:hover {
     color: #1a5dad;
     margin-left: 20px;
+}
+
+.sidenav .separator {
+    height: 20px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
