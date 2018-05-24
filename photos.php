@@ -218,37 +218,37 @@ function generatePath($path)
 }
 
 ?>
-<div id="photo_overlay" style="display:none">
+    <div id="photo_overlay" style="display:none">
 
-    <img src="" id="img_big" onclick="toggleFullscreen()">
-    <div id="close_back" onclick="closeBig()"></div>
-    <div id="loading" onclick="closeBig()">
-        <i class="fas fa-spinner fa-spin"></i>
-    </div>
+        <img src="" id="img_big" onclick="toggleFullscreen()">
+        <div id="close_back" onclick="closeBig()"></div>
+        <div id="loading" onclick="closeBig()">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
 
-    <div id="photo_buttons">
-        <i id="right" class="fas fa-arrow-right" onclick="displayNext(1)"></i>
-        <i id="left" class="fas fa-arrow-left" onclick="displayNext(-1)"></i>
-        <div id="photo_control">
-            <i id="close" class="fas fa-times" onclick="closeBig()"></i>
-            <a id="img_big_download" download="" href="">
-                <i id="download" class="fas fa-download"></i>
-            </a>
-            <a href="" id="img_big_link">
-                <i id="fullscreen" class="fas fa-expand-arrows-alt"></i>
-            </a>
+        <div id="photo_buttons">
+            <i id="right" class="fas fa-arrow-right" onclick="displayNext(1)"></i>
+            <i id="left" class="fas fa-arrow-left" onclick="displayNext(-1)"></i>
+            <div id="photo_control">
+                <i id="close" class="fas fa-times" onclick="closeBig()"></i>
+                <a id="img_big_download" download="" href="">
+                    <i id="download" class="fas fa-download"></i>
+                </a>
+                <a href="" id="img_big_link">
+                    <i id="fullscreen" class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<h1 id="photos_title">Photos</h1>
-<p>Cliquez sur le dossier de votre choix pour afficher les photos</p>
-<ul class="photos_path">
-    <li><p>Chemin : </p></li>
-    <?php
-    generatePath(getActivePath());
-    ?>
-</ul>
+    <h1 id="photos_title">Photos</h1>
+    <p>Cliquez sur le dossier de votre choix pour afficher les photos</p>
+    <ul class="photos_path">
+        <li><p>Chemin : </p></li>
+        <?php
+        generatePath(getActivePath());
+        ?>
+    </ul>
 <?php if (getDirectoriesCount(photoRoot . getActivePath()) > 0): ?>
     <div class="photos_folder">
         <?php
@@ -271,7 +271,7 @@ function generatePath($path)
         ?>
     </div>
 <?php endif; ?>
-<script src="assets/scripts/photosScript.js"></script>
+    <script src="assets/scripts/photosScript.js"></script>
 <?php
 $pageContent = ob_get_clean(); // Store html content in variable
 ?>
