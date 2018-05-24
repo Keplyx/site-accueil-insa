@@ -41,6 +41,8 @@ $comRespo2 = "Blaise MAUGARD";
 $comRespo2Id = "bmaugard";
 include("includes/coms/com_template.php");
 
+$comRespo2 = "";
+
 $comTitle = "COM Hubble";
 $comDescription = "Souriez vous êtes filmés";
 $comRespo = "Lyana LETOURNEAU";
