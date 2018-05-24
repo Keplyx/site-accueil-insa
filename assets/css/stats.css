@@ -1,0 +1,78 @@
+#stats_container {
+    display: inline-flex;
+    width: 100%;
+}
+
+.stats_table {
+    width: 48%;
+    border: none;
+    margin: 1% 1% 1% 1%;
+}
+
+.stats_table th{
+    border-radius: 10px 10px 0 0;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.stats_table .stat_log, .stats_table .stat_points {
+    color: #1c1c1c;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+#stats_usa th {
+    background-color: #1a5dad;
+    border-color: #1a5dad;
+}
+
+#stats_usa .stat_log, #stats_usa .stat_points {
+    background-color: #639fad;
+    border-color: #639fad;
+}
+
+#stats_usa td {
+    border-color: #639fad;
+}
+
+#stats_urss th {
+    background-color: #d72229;
+    border-color: #d72229;
+}
+
+#stats_urss .stat_log, #stats_urss .stat_points {
+    background-color: #d75556;
+    border-color: #d75556;
+}
+
+#stats_urss td {
+    border-color: #d75556;
+}
+
+.stat_log {
+    width: 80%;
+}
+
+.stat_points {
+    width: 20%;
+}
+
+#positive{
+    color: #e9b600;
+    font-weight: bold;
+}
+
+#negative{
+    color: #cea380;
+}
+
+@media screen and (max-width: 480px) {
+    #stats_container {
+        display: block;
+        width: 100%;
+    }
+
+    .stats_table {
+        width: 100%;
+    }
+}
