@@ -285,21 +285,19 @@ Full-Width Styles
     border: 1px solid #494949;
 }
 
+#table_coms .spacer{
+    width: 20%;
+}
+
 #table_coms td{
     vertical-align: middle;
     border: none;
     padding: 0;
+    width: 30%;
 }
-
-#table_coms .com_photo{
-    vertical-align: middle;
-    width: 50%;
-}
-
 
 #table_coms img{
     height: 100px;
-    margin: 5px;
 }
 
 .com_description{
@@ -451,6 +449,12 @@ Small Device Styles
 
     #score_usa, #score_urss {
         font-size: 25px;
+    }
+    #table_coms .spacer{
+        width: 0;
+    }
+    #table_coms td{
+        width: 50%;
     }
 }
 
