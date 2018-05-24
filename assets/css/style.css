@@ -393,6 +393,50 @@ Full-Width Styles
     width: 100px;
 }
 
+#main_pages{
+    width: 100%;
+    display: inline-grid;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.main-link{
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0;
+    margin: 5px;
+    height: 100px;
+    color: #e0e0e0;
+}
+
+.main-link:hover{
+    color: #1a5dad;
+}
+
+.main-logo {
+    width: 20%;
+    font-size: 64px;
+    background: #1c1c1c;
+    box-shadow: 0 0 10px #1c1c1c;
+    display: inline-flex;
+}
+
+.main-logo svg {
+    margin: auto;
+}
+
+.main-text {
+    width: 80%;
+    font-size: 20px;
+    display: inline-flex;
+    background: linear-gradient(to right, #1c1c1c, transparent 90%);
+}
+.main-text span {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
@@ -455,6 +499,12 @@ Small Device Styles
     }
     #table_coms td{
         width: 50%;
+    }
+    .main-logo {
+        font-size: 32px;
+    }
+    .main-text {
+        font-size: 15px;
     }
 }
 
