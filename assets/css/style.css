@@ -437,6 +437,11 @@ Full-Width Styles
     margin-bottom: auto;
 }
 
+#list_blouse{
+    text-align: left;
+    list-style: square;
+}
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
