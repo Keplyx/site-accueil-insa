@@ -442,8 +442,8 @@ Full-Width Styles
     list-style: square;
 }
 
-#map {
-    height: 600px;
+#map svg path{
+    transition: 0.3s;
 }
 
 /*******************************************************************************

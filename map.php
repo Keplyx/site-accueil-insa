@@ -7,7 +7,10 @@ ob_start(); // Start reading html
     <a
             href="https://www.openstreetmap.org/#map=17/43.57103/1.46591">Open Street Map</a>
 </p>
-<?php echo file_get_contents("assets/images/map.svg"); ?>
+<div id="map">
+    <?php echo file_get_contents("assets/images/map.svg"); ?>
+</div>
+
 
 <h1>Informations</h1>
 <div id="infoBox">
