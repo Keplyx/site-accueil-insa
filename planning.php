@@ -1,8 +1,8 @@
 <?
 ob_start(); // Start reading html
 ?>
-<h1> Le Planning</h1>
-<p>Voici le planning de la semaine. Clique sur une activité pour avoir des informations.</p>
+<h1>Le Planning</h1>
+<p>Voilà le planning de ta semaine. Clique sur une activité pour avoir plus d'informations.</p>
 
 <div id="table_wrapper">
     <table cellspacing="10" id="table_planning">
@@ -86,7 +86,7 @@ ob_start(); // Start reading html
 </div>
 <h1>Informations</h1>
 <div id="infoBox">
-    <p>Clique sur un évenement pour afficher ses Informations</p>
+    <p>Clique sur un évenement pour afficher ses informations</p>
 </div>
 <script src="assets/scripts/planningScript.js"></script>
 <?php

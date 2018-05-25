@@ -242,7 +242,8 @@ function generatePath($path)
     </div>
 
     <h1 id="photos_title">Photos</h1>
-    <p>Cliquez sur le dossier de votre choix pour afficher les photos</p>
+    <p>Clique sur le dossier de ton choix pour afficher les photos. Il faut que tu sois inscrit à l'INSA pour pouvoir
+        les regarder (et oui, pas de spoiler).</p>
     <ul class="photos_path">
         <li><p>Chemin : </p></li>
         <?php

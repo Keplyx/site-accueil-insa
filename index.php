@@ -41,7 +41,7 @@ include("includes/sidenav.html");
 
         $link = "photos.php";
         $icon = "fas fa-camera";
-        $text = "Les photos de la semaine (la tienne et celles de tes parrains/marraines) !";
+        $text = "Les photos de la semaine (la tienne et la notre) !";
         include("includes/main_button_template.php");
 
         $link = "stats.php";
@@ -64,7 +64,7 @@ include("includes/sidenav.html");
         $text = "Les téléchargements, si t'as paumé une feuille !";
         include("includes/main_button_template.php");
 
-        $link = "infos.php";
+        $link = "info.php";
         $icon = "fas fa-info";
         $text = "Les informations supplémentaires, si tu veux tout savoir !";
         include("includes/main_button_template.php");

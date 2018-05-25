@@ -54,7 +54,7 @@ function enableHamburger() {
  */
 var img = document.querySelector('.sidenav');
 // Create a manager to manager the element
-var manager = new Hammer.Manager(img);
+var manager = new Hammer.Manager(img, {touchAction: "auto"}); // enable the touch action to allow scrolling on the sidenav
 // Create a recognizer
 var Swipe = new Hammer.Swipe();
 // Add the recognizer to the manager

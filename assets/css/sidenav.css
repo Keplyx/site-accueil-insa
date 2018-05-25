@@ -15,6 +15,7 @@
 
 
 #sidenav-scroll {
+    position: absolute;
     padding: 80px 0 50px 0;
     width: 100%;
 }

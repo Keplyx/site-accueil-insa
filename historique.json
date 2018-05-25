@@ -11,12 +11,16 @@
    ],
   "urss":[
     {
-      "text": "non ! Mes points!",
-      "points": -99
+      "text": "ah ! Mes points!",
+      "points": 49
     },
     {
       "text": "yes, des points!",
       "points": 45
+    },
+    {
+      "text": "encore !",
+      "points": 5
     }
   ]
 }

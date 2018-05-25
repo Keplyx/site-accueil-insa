@@ -10,17 +10,21 @@
         <td rowspan="2" class="spacer"></td>
     </tr>
     <tr>
-        <td><span class="fas fa-envelope"></span> Mail : <?= $comRespoId ?></td>
+        <td><?= $comRespoId ?><span
+                    class="fas fa-envelope"></span>etud.insa-toulouse.fr
+        </td>
     </tr>
     <?php if ($comRespo2 != ""): ?>
-    <tr>
-        <td rowspan="2" class="spacer"></td>
-        <td><?= $comRespo2 ?></td>
-        <td rowspan="2"><img src="<?= $comRespo2Photo ?>"></td>
-        <td rowspan="2" class="spacer"></td>
-    </tr>
-    <tr>
-        <td><span class="fas fa-envelope"></span> Mail : <?= $comRespo2Id ?></td>
-    </tr>
+        <tr>
+            <td rowspan="2" class="spacer"></td>
+            <td><?= $comRespo2 ?></td>
+            <td rowspan="2"><img src="<?= $comRespo2Photo ?>"></td>
+            <td rowspan="2" class="spacer"></td>
+        </tr>
+        <tr>
+            <td><?= $comRespo2Id ?><span
+                        class="fas fa-envelope"></span>etud.insa-toulouse.fr
+            </td>
+        </tr>
     <?php endif; ?>
 </table>

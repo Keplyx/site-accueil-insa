@@ -1,9 +1,8 @@
 <?php
 ob_start(); // Start reading html
 ?>
-<h1>Coms</h1>
-<p>Voici la liste de toutes les coms de la semaine d'accueil, avec les contacts des responsables.</p>
-<p>Tous les mails cités sur cette page se terminent par <strong>@etud.insa-toulouse.fr</strong></p>
+<h1>Les Coms</h1>
+<p>La liste de toutes les coms de ta semaine d'accueil, avec les contacts des responsables.</p>
 <?php
 $comTitle = "COM Mise à Feu";
 $comDescription = "Ici pour mettre l'ambiance toute la semaine!";
