@@ -1,6 +1,6 @@
 
-var clickedColor = "#c51d00";
-var hoverColor = "#c5a360";
+var clickedColor = "#ee293d";
+var hoverColor = "#1a5dad";
 var normalColor = "#d9cfc7";
 
 var selected;

@@ -26,7 +26,12 @@ include("includes/sidenav.html");
         <?php
         $link = "planning.php";
         $icon = "fas fa-calendar-alt";
-        $text = "Le planning de ta semaine ! Sois au courant de tous les événements !";
+        $text = "Le planning de ta semaine, sois au courant de tous les événements !";
+        include("includes/main_button_template.php");
+
+        $link = "map.php";
+        $icon = "fas fa-map";
+        $text = "Le plan du campus, il est interactif et tout, comme ça tu peux pas te perdre !";
         include("includes/main_button_template.php");
 
         $link = "parrainage.php";
