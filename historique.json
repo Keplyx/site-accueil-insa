@@ -1,30 +1,46 @@
 {
   "usa": [
     {
-      "text": "whoa, des points!",
+      "text": "Chute dans le Canal!",
       "points": 56
     },
     {
-      "text": "whoa, encore des points!",
-      "points": 2
+      "text": "Perdre le coude face à un ecocup",
+      "points": 15
+    },
+    {
+      "text": "Créer une crise financière chez supaéro",
+      "points": 15
+    },
+    {
+      "text": "Aimer la sieste",
+      "points": 70
     }
    ],
+  
   "urss":[
     {
-      "text": "ah ! Mes points!",
-      "points": 49
+      "text": "Soissons46",
+      "points": 46
     },
     {
-      "text": "yes, des points!",
-      "points": 45
+      "text": "Traiter avec l'ennemi",
+      "points": -46
     },
     {
-      "text": "encore !",
-      "points": 5
+      "text": "Demander MIC sans valider les Maths"
+      "points": 50
+    },
+    {
+      "text": "Camper en amphi",
+      "points": 20
     },
      {
-      "text": "Crash Test",
-      "points": 2
-    }
+      "text": "Inaugurer la chasie du Fabcamp",
+      "points": 20
+    },
+    {
+      "text": "Vomir dans son themro en amphi",
+      "points": 20
   ]
 }
