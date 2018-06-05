@@ -14,7 +14,7 @@
     },
     {
       "text": "Aimer la sieste",
-      "points": 70
+      "points": 60
     }
    ],
   
@@ -22,6 +22,10 @@
     {
       "text": "Soissons46",
       "points": 46
+    },
+    {
+      "text": "Paquito au naturel",
+      "points": 25
     },
     {
       "text": "Traiter avec l'ennemi",
@@ -36,11 +40,11 @@
       "points": 20
     },
      {
-      "text": "Inaugurer la chasie du Fabcamp",
+      "text": "Inaugurer la chaise du Fabcamp",
       "points": 20
     },
     {
-      "text": "Vomir dans son themro en amphi",
+      "text": "Vomir dans son thermos en amphi",
       "points": 20
     }
   ]
